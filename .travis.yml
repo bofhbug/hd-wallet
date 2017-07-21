@@ -9,8 +9,6 @@ matrix:
         - test_helpers/install_nodejs4.sh
         - sudo test_helpers/install_regtest.sh
         - mv karma.conf.js-discovery karma.conf.js
-        - cp lib/trezor-crypto/emscripten/trezor-crypto.js test/trezor-crypto.js
-        - cp lib/trezor-crypto/emscripten/trezor-crypto.wasm test/trezor-crypto.wasm
       env: TEST_SUITE=karma-firefox TEST=discovery
       addons:
         firefox: latest

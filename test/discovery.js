@@ -54,7 +54,9 @@ const cryptoWorkerFactory = () => {
             requireHack('../../../lib/trezor-crypto/emscripten/trezor-crypto.js');
         });
     } else {
-        return new Worker('./trezor-crypto.js');
+        // using this, so Workerify doesn't try to browserify this
+        const WorkerHack = eval('Work' + 'er');
+        return new WorkerHack('./base/lib/trezor-crypto/emscripten/trezor-crypto.js');
     }
 };
 
