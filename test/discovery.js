@@ -54,7 +54,7 @@ const cryptoWorkerFactory = () => {
             requireHack('../../../lib/trezor-crypto/emscripten/trezor-crypto.js');
         });
     } else {
-        return new Worker('../../lib/trezor-crypto/emscripten/trezor-crypto.js');
+        return new Worker('./trezor-crypto.js');
     }
 };
 
